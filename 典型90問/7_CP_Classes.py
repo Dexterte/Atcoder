@@ -9,10 +9,9 @@ a.sort()
 
 for i in range(q):
     index = bisect_left(a, b[i])
-    if index <= 0:
-        ans = abs(b[i] - a[index])
-    elif n <= index:
-        ans = abs(b[i] - a[index - 1])
-    else:
-        ans = min(abs(b[i] - a[index]), abs(b[i] - a[index - 1]))
-    print(ans)
+    result = float('inf')
+    if index < n:
+        result = min(result, abs(b[i] - a[index]))
+    if index > 0:
+        result = min(result, abs(b[i] - a[index - 1]))
+    print(result)
