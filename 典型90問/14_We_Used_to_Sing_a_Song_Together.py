@@ -1,0 +1,11 @@
+n = int(input())
+a_list = list(map(int, input().split()))
+b_list = list(map(int, input().split()))
+
+a_list.sort()
+b_list.sort()
+
+ans = 0
+for a, b in zip(a_list, b_list):
+    ans += abs(a - b)
+print(ans)
