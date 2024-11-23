@@ -1,5 +1,3 @@
-from collections import defaultdict
-
 s = input()
 t = input()
 
